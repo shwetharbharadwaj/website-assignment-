@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+<style>
+    
+    body{
+        
+      background-image: url(image/ga.jpg);
+
+    }    
+.div1 {
+  width: 250px;
+  height: 100px;
+  padding: 40px;
+  border: 1px solid black;
+    float:left;
+    
+}
+    .div2{
+ width: 250px;
+  height: 70px;
+  padding: 40px;
+  border: 1px solid black;
+    float:left;
+    margin-top: 150px;
+    padding-top: 30px;    
+    }
+</style>
+<script>
+function allow1(e) {
+  e.preventDefault();
+}
+    function allow2(e) {
+  e.preventDefault();
+}
+    
+    function allow3(e) {
+  e.preventDefault();
+}
+    function allow4(e) {
+  e.preventDefault();
+}
+
+function drag1(e) {
+  e.dataTransfer.setData("drag1", e.target.id);
+    
+}
+    function drag2(e) {
+  e.dataTransfer.setData("drag2", e.target.id);
+    
+}
+    function drag3(e) {
+  e.dataTransfer.setData("drag3", e.target.id);
+    
+}
+    function drag4(e) {
+  e.dataTransfer.setData("drag4", e.target.id);
+    
+}
+
+function drop1(e) {
+  e.preventDefault();
+  var data = e.dataTransfer.getData("drag1");
+  e.target.appendChild(document.getElementById(data));
+}
+    function drop2(e) {
+  e.preventDefault();
+  var data = e.dataTransfer.getData("drag2");
+  e.target.appendChild(document.getElementById(data));
+}
+function drop3(e) {
+  e.preventDefault();
+  var data = e.dataTransfer.getData("drag3");
+  e.target.appendChild(document.getElementById(data));
+}
+function drop4(e) {
+  e.preventDefault();
+  var data = e.dataTransfer.getData("drag4");
+  e.target.appendChild(document.getElementById(data));
+}
+
+    
+</script>
+    <div class="navbar"> 
+<a href="index.html">Form</a>
+<a href="div1.html">Division</a>
+<a href="tooltip.html">tooltip</a>
+<a href="justDail.html">JustDail</a>
+<a href="messageDisplay.html">Display</a>
+<a href="assignment.html">Employee form</a>  
+<a href="pop.html">Pop up </a>
+<a href="Div.html">Div</a>
+<a href="encode%20and%20decode.html">encodeDecode </a>
+<a class="active"  href="drag%20and%20drop.html">dragDrop</a>
+<a href="timer.html">Timer</a>
+<a href="jsonfile.html">JSON</a>    
+    </div>
+</head>
+<body>
+    <div id="name" class="div1" ondrop="drop1(event)" ondragover="allow1(event)">NAME</div>
+    <div id="place" class="div1" ondrop="drop2(event)" ondragover="allow2(event)">PLACE</div>
+    <div id="animal" class="div1" ondrop="drop3(event)" ondragover="allow3(event)">ANIMAL</div>
+    <div id="thing" class="div1" ondrop="drop4(event)" ondragover="allow4(event)">THING</div> 
+    <br> <br> <br> <br>
+       <div class="div2"><img id="drag3"src="image/animal.jpg" ondragstart="drag3(event)"width="200px" height="100px"></div>
+     <div class="div2"><img id="drag4"src="image/telephone.jpg" ondragstart="drag4(event)"width="200px" height="90px"></div>
+      <div class="div2"><img id="drag1" src ="image/name.png" ondragstart="drag1(event)" width="100px"></div>
+        <div class="div2"><img id="drag2"src="image/burj.jpg" ondragstart="drag2(event)"width="180px" height="90px"></div>
+
+    
+    
+</body>
+</html>

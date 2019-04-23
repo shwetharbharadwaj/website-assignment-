@@ -1,0 +1,68 @@
+<html> 
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <style>
+        body{
+            background-color: gray;
+          
+
+        }
+        .btn{
+            margin-top: 20px;
+            padding: 20px;
+            color: black;
+            size: 20px;
+        }
+    </style>
+    <script>
+var countdown;
+var countnumber;
+function countdowninit()
+ {
+    countnumber = 31;
+    trigger();
+}
+        
+function trigger() {
+    if(countnumber > 0) {
+        countnumber--;
+        document.getElementById('countdowntext').innerHTML = countnumber;
+    }
+        if(countnumber > 0)
+         {
+            countdown = setTimeout('trigger()', 1000);
+        }
+        if(countnumber < 10){
+            document.getElementById('countdowntext').style.color = "red";
+        }
+}
+        function countdownclear() 
+        {
+         clearTimeout(countdown);
+        } 
+        
+</script>
+<div class="navbar"> 
+<a  href="index.html">Form</a>
+<a href="div1.html">Division</a>
+<a href="tooltip.html">tooltip</a>
+<a href="justDail.html">JustDail</a>
+<a href="messageDisplay.html">Display</a>
+<a href="assignment.html">Employee form</a>  
+<a href="pop.html">Pop up </a>
+<a href="Div.html">Div</a>
+<a href="encode%20and%20decode.html">encodeDecode </a>
+<a href="drag%20and%20drop.html">dragDrop</a>
+<a class="active" href="timer.html">Timer</a>
+<a href="jsonfile.html">JSON</a>    
+    </div>  
+</head>
+ 
+<div>
+     <button class="btn" onclick="countdowninit()">startCountdown</button>
+     <button class="btn" onclick="coutdownclear()">stopCountdown</button> 
+   
+ </div>
+  
+<div id="countdowntext" style="font-size: 100px" align="center"></div>
+</html>

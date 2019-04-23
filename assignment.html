@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <link rel="stylesheet" href="style.css">
+    <!-- Standard Meta-->
+  <meta charset="utf-8" />
+  <title>assignment</title>
+    <style>
+        .item{
+       border:none;
+        }
+            body{
+               background-image: url(image/image.jpg); 
+            }   
+            }   
+        .gest{
+          margin-top: 100px;
+           color: black;
+            border-color:azure;
+        }
+     
+</style>
+    <script>
+var i=0;
+var details=[];
+        var fname;
+        var lname;
+        var some;
+        var marrie;
+        var table;
+        var row;
+        var cell1;
+        var cell2;
+        var cell3;
+        var cell4;
+        
+   function disable(){
+       document.getElementById("wife").style.visibility='hidden';
+   }
+    function checkforblank(){
+            
+         
+             if(document.getElementById("fname").value=='')
+             
+             
+             {
+                 
+                 alert("Enter your first name");
+             }
+             
+            if(document.getElementById("lname").value=='')
+    
+                   { 
+                       alert("enter your last name");
+      
+                  }
+        else
+        {
+        fname=document.getElementById("fname").value;
+        lname=document.getElementById("lname").value;
+        some=document.getElementById("some").value;
+        marrie=document.getElementById("marrie").value;    
+        alert("thank you");
+   
+    details[i]=[{
+        fname: fname,
+        lname:lname,
+        some:some,
+        marrie:marr
+    }];
+            i=i+1;
+    }}
+function view(){ 
+    document.getElementById("myTable").hidden = false;
+ table = document.getElementById("myTable");
+ row = table.insertRow(1);
+    
+    var cell1 = row.insertCell(i);
+  var cell2 = row.insertCell(i);
+    var cell3 = row.insertCell(i);
+  var cell4 = row.insertCell(i);
+    cell1.innerHTML= marrie;
+     cell2.innerHTML= some;
+     cell3.innerHTML= lname;
+     cell4.innerHTML= fname;
+    
+ 
+  }
+         
+  </script>
+    
+ <div class="navbar"> 
+<a  href="index.html">Form</a>
+<a href="div1.html">Division</a>
+<a href="tooltip.html">tooltip</a>
+<a href="justDail.html">JustDail</a>
+<a href="messageDisplay.html">Display</a>
+<a class="active" href="assignment.html">Employee form</a>  
+<a href="pop.html">Pop up </a>
+<a href="Div.html">Div</a>
+<a href="encode%20and%20decode.html">encodeDecode </a>
+<a href="drag%20and%20drop">dragDrop</a>
+<a href="timer.html">Timer</a>
+<a href="jsonfile.html">JSON</a>    
+    </div>
+    </head>
+       <body>
+        <center><h2>EMPLOYEE DETAILS</h2></center>
+
+   <table id=table class="gest" align="center" cellpadding = "10" border="2px">
+    <form id=myForm method="post">
+    <tr>
+<td>FIRST NAME</td>
+<td><input type="text" id="fname" autofocus>
+</td>
+</tr>
+  <tr>
+<td>LAST NAME</td>
+<td><input type="text" id="lname">
+</td>
+</tr>              
+               
+    <tr>
+<td>GENDER</td>
+<td>
+Male <input type="radio" name="Gender" id="some" value="Female">
+Female <input type="radio" name="Gender" id="some" value="male" >
+</td>
+</tr>           
+  <tr>
+<td>MARITAL STATUS</td>
+<td>
+Married<input type="radio" name="married" id="marrie" value="Umarried" >
+Unmarried<input type="radio"name="married" value="Married" id="marrie" onclick="disable()">
+</td>
+</tr>           
+ <tr>
+<td>SPOUSE NAME</td>
+<td><input type="text" name="spouse" id="wife">
+</td>
+</tr>                   
+  <tr>
+<td>OTHER DETAILS</td>
+<td><input type="text" id="other" name="details">
+</td>
+</tr>  
+<tr>
+<td class="item">
+    <input type="checkbox" id="check" style="border: 2px thin" checked> I accept <a href="#">Terms & conditions.</a>
+    </td>
+ 
+        </tr>
+<td><input type="button" value="submit" onclick="checkforblank()" >
+</td>
+
+       <td> <input type="reset" value="reset">
+        </td>
+        </form>  
+    
+           </table>
+           
+           
+    <br><br><br>
+           
+  <center> <button onclick="view()" > view</button></center><br><br>
+   <center><table id="myTable" align="center" cellpadding = "10" border="2px" hidden>
+  <thead>
+    <td>First name</td>
+    <td>Last name</td>
+      <td>gender</td>
+      <td>marital</td>
+</thead>  
+</table> 
+</center>
+</body>
+
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<form id="form1" runat="server">
+  <input type='file' id="imgInp" />
+  <img id="blah" src="#" alt="your image" />
+</form>

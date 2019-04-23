@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+ <head>
+      <link rel="stylesheet" href="style.css">
+ <title>read a json file</title> 
+ <style>
+     body{
+        background-color: gray;
+     }
+     .btn{
+            margin-top: 20px;
+            padding: 20px;
+            color: black;
+            size: 20px;
+        }
+ </style>
+<script> 
+function readdata()
+    {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function(){
+            if(xhttp.readyState==4 && xhttp.status==200)
+            {
+                var jobj=JSON.parse(xhttp.response);
+                document.getElementById("div").innerHTML= jobj.name;
+            }
+        };
+        xhttp.open("GET","data.json",true);
+        xhttp.send();
+    }
+</script>     
+  <div class="navbar"> 
+<a  href="index.html">Form</a>
+<a href="div1.html">Division</a>
+<a href="tooltip.html">tooltip</a>
+<a href="justDail.html">JustDail</a>
+<a href="messageDisplay.html">Display</a>
+<a href="assignment.html">Employee form</a>  
+<a href="pop.html">Pop up </a>
+<a href="Div.html">Div</a>
+<a href="encode%20and%20decode.html">encodeDecode </a>
+<a href="drag%20and%20drop.html">dragDrop</a>
+<a href="timer.html">Timer</a>
+<a class="active" href="jsonfile.html">JSON</a>    
+    </div>  
+</head>
+    <body>
+    <input type="button" class="btn" name="name" onclick="readdata()" value="Click" />
+    <div id="div"></div>    
+    </body></html>
